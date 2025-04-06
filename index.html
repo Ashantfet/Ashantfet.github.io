@@ -1,12 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Ashantfet's Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Ashantfet | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link href="libs/aos/aos.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello, I'm Ashantfet!</h1>
-    <p>Welcome to my personal website. More coming soon.</p>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" data-aos="fade-up">
+    <div class="hero-content">
+      <h1>Hello, I'm <span>Ashantfet</span></h1>
+      <p>Web Developer | Problem Solver | Tech Enthusiast</p>
+      <button onclick="scrollToContact()">Contact Me</button>
+    </div>
+  </section>
+
+  <script src="libs/aos/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- ABOUT SECTION -->
+<section id="about" class="about-section">
+  <h2>About Me</h2>
+  <div class="about-content">
+    <img src="your-photo.jpg" alt="Your photo">
+    <div>
+      <p>Hello! I'm <strong>Your Name</strong>, a passionate developer interested in AI, systems, and mentoring.</p>
+      <p>I enjoy building real-world projects, solving tough problems, and helping others grow. Currently pursuing [Your Program] at [Your Institute].</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+  <h2>Contact Me</h2>
+  <p>If you'd like to connect or collaborate, feel free to reach out!</p>
+  <form id="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+<div class="theme-toggle">
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider"></span>
+  </label>
+</div>
+    <script>
+        const toggleSwitch = document.querySelector('.theme-toggle input[type="checkbox"]');
+        toggleSwitch.addEventListener('change', switchTheme, false);
+    
+        function switchTheme(e) {
+        if (e.target.checked) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+        }
+    </script>
 </body>
 </html>
-
